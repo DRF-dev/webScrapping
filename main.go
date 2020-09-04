@@ -1,14 +1,45 @@
 package main
 
 import (
+	"encoding/csv"
 	"flag"
 	"fmt"
 	"io"
 	"log"
 	"net/http"
 	"os"
+	"strconv"
 	"time"
 )
+
+//ParseCsv : parse les csv sélectionné
+//Prend en paramètre un fichier csv
+func ParseCsv(csvFile string) ([]string, error) {
+	//On initialise le tableau qui contiendra toutes nos urls
+	urls := make([]string, 0)
+
+	//On ouvre le fichier csv et rappel de le fermer à la fin du script
+	file, err := os.Open(csvFile)
+	if err != nil {
+		return nil, err
+	}
+	defer file.Close()
+
+	//On lit chaque url noté dans le csv
+	toRead := csv.NewReader(file)
+	csvElm, err := toRead.ReadAll()
+	if err != nil {
+		return nil, err
+	}
+
+	//On ajoute ces urls dans le tableau initialisé au début
+	for _, elm := range csvElm {
+		url := elm[0]
+		urls = append(urls, url)
+	}
+
+	return urls, nil
+}
 
 func checkError(err error) {
 	if err != nil {
@@ -16,42 +47,39 @@ func checkError(err error) {
 	}
 }
 
-func createHTMLFile(filename string, HTMLFileChan chan *os.File) {
+func createHTMLFile(filename string) *os.File {
 	HTMLFile, err := os.Create(filename + ".html")
 	checkError(err)
-	HTMLFileChan <- HTMLFile
+	return HTMLFile
 }
 
-func readURL(url string, resBodyChan chan *http.Response) {
+func readURL(url string) *http.Response {
 	res, err := http.Get(url)
 	checkError(err)
-	resBodyChan <- res
+	return res
 }
 
 func main() {
 	//Debut chrono
 	begin := time.Now()
 
-	fileName := flag.String("f", "", "Le nom du fichier qui accueillera notre scrap")
-	urlLink := flag.String("url", "", "L'url que l'on va scrapper")
+	fileName := flag.String("f", "", "Le nom du fichier csv")
 	flag.Parse()
 
-	//On créer nos channel pour gérer nos goroutines
-	HTMLFileChan := make(chan *os.File)
-	resBodyChan := make(chan *http.Response)
+	//On récupère les html du fichier csv
+	urls, err := ParseCsv(*fileName)
+	checkError(err)
 
 	//goroutines => création fichier html + scrapping de données
-	go createHTMLFile(*fileName, HTMLFileChan)
-	go readURL(*urlLink, resBodyChan)
-
-	//Récup des données des goroutines
-	htmlFile := <-HTMLFileChan
-	result := <-resBodyChan
-	defer result.Body.Close()
-
-	//On écrit le contenu de notre scraping dans le fichier html
-	_, err := io.Copy(htmlFile, result.Body)
-	checkError(err)
+	for i, url := range urls {
+		index := strconv.Itoa(i)
+		htmlFile := createHTMLFile(index)
+		res := readURL(url)
+		defer res.Body.Close()
+		//On écrit le contenu de notre scraping dans le fichier html
+		_, err = io.Copy(htmlFile, res.Body)
+		checkError(err)
+	}
 
 	//Temps d'éxecution du script
 	fmt.Printf("Ce script s'est éxecuté en %v\n", time.Now().Sub(begin))
