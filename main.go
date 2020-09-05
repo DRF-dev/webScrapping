@@ -9,8 +9,11 @@ import (
 	"net/http"
 	"os"
 	"strconv"
+	"sync"
 	"time"
 )
+
+var async sync.WaitGroup
 
 //ParseCsv : parse les csv sélectionné
 //Prend en paramètre un fichier csv
@@ -59,6 +62,18 @@ func readURL(url string) *http.Response {
 	return res
 }
 
+//Création d'une goroutine pour chaque url à scrapper
+func asynchrone(i int, url string) {
+	index := strconv.Itoa(i)
+	htmlFile := createHTMLFile(index)
+	res := readURL(url)
+	defer res.Body.Close()
+	//On écrit le contenu de notre scraping dans le fichier html
+	_, err := io.Copy(htmlFile, res.Body)
+	checkError(err)
+	defer async.Done()
+}
+
 func main() {
 	//Debut chrono
 	begin := time.Now()
@@ -70,16 +85,13 @@ func main() {
 	urls, err := ParseCsv(*fileName)
 	checkError(err)
 
-	//goroutines => création fichier html + scrapping de données
+	//goroutines: création fichier html + scrapping de données
 	for i, url := range urls {
-		index := strconv.Itoa(i)
-		htmlFile := createHTMLFile(index)
-		res := readURL(url)
-		defer res.Body.Close()
-		//On écrit le contenu de notre scraping dans le fichier html
-		_, err = io.Copy(htmlFile, res.Body)
-		checkError(err)
+		async.Add(1)
+		go asynchrone(i, url)
 	}
+
+	async.Wait()
 
 	//Temps d'éxecution du script
 	fmt.Printf("Ce script s'est éxecuté en %v\n", time.Now().Sub(begin))

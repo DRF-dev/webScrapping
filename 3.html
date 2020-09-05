@@ -1,0 +1,557 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" class="no-js" lang="fr" xml:lang="fr">
+<head>
+<title>
+[Root Me : plateforme d'apprentissage dédiée au Hacking et à la Sécurité de l'Information]
+</title>
+<meta name="description" content="Root Me est une plateforme permettant &#224; chacun de tester et d&#039;am&#233;liorer ses connaissances dans le domaine de la s&#233;curit&#233; informatique et du hacking &#224; travers la publication de challenges, de solutions, d&#039;articles." />
+<meta name="keywords" content="hack, hacking, challenge, solution, exercice, hacking challenge, hack challenge, exercice hack, exercice hacking, capture the flag, CTF, security, sécurité, Documentation,Applicatif,Cryptologie,Challenges,Outils,R&#233;seaux,Cracking,Web - Client,Programmation,Cryptanalyse,Communaut&#233;,Chat Box,Application,Pr&#233;sentation,Session,Transport ,R&#233;seau,Liaison,Physique,St&#233;ganographie,Web - Serveur,Cracking,R&#233;aliste,Classement,Informations,L&#039;association,Mentions L&#233;gales,Partenaires,Faiblesses d&#233;couvertes,Forum,Le projet,Challenges, Hacking et S&#233;curit&#233; Informatique,G&#233;n&#233;ral,Contribuer,Canal IRC,Membres,R&#233;seau,Capture The Flag,App - Script,Calendrier,CTF all the day,Capture The Flag,Sponsors,App - Syst&#232;me,Forensic,Web," />
+<link rel="alternate" type="application/rss+xml" title="RSS [Root Me : plateforme d&#039;apprentissage d&#233;di&#233;e au Hacking et &#224; la S&#233;curit&#233; de l&#039;Information]" href="https://www.root-me.org?page=backend&amp;lang=fr" />
+<link rel="alternate" type="application/rss+xml" title="RSS (breves) [Root Me : plateforme d&#039;apprentissage d&#233;di&#233;e au Hacking et &#224; la S&#233;curit&#233; de l&#039;Information]" href="https://www.root-me.org?page=backend-breves&amp;lang=fr" />
+<link rel="alternate" type="application/rss+xml" title="RSS Forum [Root Me : plateforme d&#039;apprentissage d&#233;di&#233;e au Hacking et &#224; la S&#233;curit&#233; de l&#039;Information]" href="https://www.root-me.org?page=backend-forums&amp;lang=fr" />
+<link rel="alternate" type="application/rss+xml" title="RSS challenges [Root Me : plateforme d&#039;apprentissage d&#233;di&#233;e au Hacking et &#224; la S&#233;curit&#233; de l&#039;Information]" href="https://www.root-me.org?page=backend-challenges&amp;lang=fr" />
+<link rel="alternate" type="application/rss+xml" title="RSS solutions [Root Me : plateforme d&#039;apprentissage d&#233;di&#233;e au Hacking et &#224; la S&#233;curit&#233; de l&#039;Information]" href="https://www.root-me.org?page=backend-solutions&amp;lang=fr" />
+<link rel="alternate" type="application/rss+xml" title="RSS CTF all the day [Root Me : plateforme d&#039;apprentissage d&#233;di&#233;e au Hacking et &#224; la S&#233;curit&#233; de l&#039;Information]" href="https://www.root-me.org?page=backend-ctfalltheday&amp;lang=fr" />
+<link rel="alternate" type="application/rss+xml" title="RSS CTF calendar [Root Me : plateforme d&#039;apprentissage d&#233;di&#233;e au Hacking et &#224; la S&#233;curit&#233; de l&#039;Information]" href="https://www.root-me.org?page=backend-ctf&amp;lang=fr" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />            
+<link rel='stylesheet' href='local/cache-css/01205069d6cbb412651de0422ed7c470.css?1599158112' type='text/css' />    
+<script type="text/javascript">/* <![CDATA[ */
+var box_settings = {tt_img:true,sel_g:"#documents_portfolio a[type='image/jpeg'],#documents_portfolio a[type='image/png'],#documents_portfolio a[type='image/gif']",sel_c:".mediabox",trans:"elastic",speed:"100",ssSpeed:"2500",maxW:"90%",maxH:"90%",minW:"400px",minH:"",opa:"0.8",str_ssStart:"Diaporama",str_ssStop:"Arrêter",str_cur:"{current}/{total}",str_prev:"Précédent",str_next:"Suivant",str_close:"Fermer",splash_url:""};
+var box_settings_splash_width = "600px";
+var box_settings_splash_height = "90%";
+var box_settings_iframe = true;
+/* ]]> */</script>
+<!-- insert_head_css -->
+<script type='text/javascript'>
+var jQl={q:[],dq:[],gs:[],ready:function(a){"function"==typeof a&&jQl.q.push(a);return jQl},getScript:function(a,c){jQl.gs.push([a,c])},unq:function(){for(var a=0;a<jQl.q.length;a++)jQl.q[a]();jQl.q=[]},ungs:function(){for(var a=0;a<jQl.gs.length;a++)jQuery.getScript(jQl.gs[a][0],jQl.gs[a][1]);jQl.gs=[]},bId:null,boot:function(a){"undefined"==typeof window.jQuery.fn?jQl.bId||(jQl.bId=setInterval(function(){jQl.boot(a)},25)):(jQl.bId&&clearInterval(jQl.bId),jQl.bId=0,jQl.unqjQdep(),jQl.ungs(),jQuery(jQl.unq()), "function"==typeof a&&a())},booted:function(){return 0===jQl.bId},loadjQ:function(a,c){setTimeout(function(){var b=document.createElement("script");b.src=a;document.getElementsByTagName("head")[0].appendChild(b)},1);jQl.boot(c)},loadjQdep:function(a){jQl.loadxhr(a,jQl.qdep)},qdep:function(a){a&&("undefined"!==typeof window.jQuery.fn&&!jQl.dq.length?jQl.rs(a):jQl.dq.push(a))},unqjQdep:function(){if("undefined"==typeof window.jQuery.fn)setTimeout(jQl.unqjQdep,50);else{for(var a=0;a<jQl.dq.length;a++)jQl.rs(jQl.dq[a]); jQl.dq=[]}},rs:function(a){var c=document.createElement("script");document.getElementsByTagName("head")[0].appendChild(c);c.text=a},loadxhr:function(a,c){var b;b=jQl.getxo();b.onreadystatechange=function(){4!=b.readyState||200!=b.status||c(b.responseText,a)};try{b.open("GET",a,!0),b.send("")}catch(d){}},getxo:function(){var a=!1;try{a=new XMLHttpRequest}catch(c){for(var b=["MSXML2.XMLHTTP.5.0","MSXML2.XMLHTTP.4.0","MSXML2.XMLHTTP.3.0","MSXML2.XMLHTTP","Microsoft.XMLHTTP"],d=0;d<b.length;++d){try{a= new ActiveXObject(b[d])}catch(e){continue}break}}finally{return a}}};if("undefined"==typeof window.jQuery){var $=jQl.ready,jQuery=$;$.getScript=jQl.getScript};
+jQl.loadjQ('local/cache-js/52cd31c32addb39e2b24badae83630e3.js?1599158112')
+</script>
+<!-- insert_head -->
+<script type="text/javascript">jQl.loadjQ("https://www.root-me.org/local/cache-js/jsdyn-script_onload_js-0c69b8b3.js?1598869131");</script>
+<link rel="icon" type="image/x-icon" href="https://www.root-me.org/squelettes/img/rblack.ico" />
+<link rel="icon" type="image/png" href="https://www.root-me.org/squelettes/img/rblackGrand32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://www.root-me.org/squelettes/img/rblackGrand16.png" sizes="16x16" />   
+</head>
+<body class="antialiased hide-extras" dir="ltr" itemscope itemtype="https://schema.org/WebPage">
+<header id="header" role="banner">
+<nav class="top-bar" data-topbar>
+<ul class="title-area" itemprop="isPartOf" itemscope itemtype="https://schema.org/WebSite">
+<li class="name">
+<a itemprop="url" href="https://www.root-me.org?lang=fr" title="la root est longue mais la voie est Libre" target="_top">
+<img width="48" height="48" class="show-for-medium-up vmiddle invert" alt="logo https://www.root-me.org" src="IMG/siteon0.svg?1574327304" itemprop="image"  />
+<img width="48" height="48" class="show-for-small-only toggleSidebar vmiddle" alt="logo https://www.root-me.org" src="IMG/siteon0.svg?1574327304" itemprop="image" />
+<span class="show-for-large-up blanc" itemprop="name">Root&nbsp;Me</span>
+</a>
+</li>    
+</ul>
+<section class="top-bar-section">
+<ul class="right">    
+<li class="lang">
+<span>
+<span>
+<a id="url_en" href="./?page=news&amp;lang=en" title="English"><img class="vmiddle" src="squelettes/img/drap_en.svg" height="16" width="16"/></a>
+<a id="url_de" href="./?page=news&amp;lang=de" title="Deutsch"><img class="vmiddle" src="squelettes/img/drap_de.svg" height="16" width="16"/></a>
+<a id="url_es" href="./?page=news&amp;lang=es" title="Espa&#241;ol"><img class="vmiddle" src="squelettes/img/drap_es.svg" height="16" width="16"/></a>
+</span>
+<a href="#"><img width="16" height="16" src="squelettes/img/drap_fr.svg" alt="fr" class="grayscale" title="fr"/></a>
+</span>
+</li>
+<li>
+<a style="height: 24px; padding: 10px 10px 0 10px;" class="mediabox pageajax boxHeight-500px" href="./?page=identifiants&amp;lang=fr" title="Créer un compte"><img src="squelettes/img/register.svg" height="16" width="16"  class="vtop"/></a>
+<a style="height: 24px; padding: 15px 10px 0 10px;" class="mediabox pageajax boxHeight-390px" href="./?page=login&amp;lang=fr" title="Se connecter"><img src="squelettes/img/login.svg" height="16" width="16"  class="vtop"/></a>
+</li>            </ul>   
+<ul class="left">
+<li class="hide-for-small-only"><a title="Foire Aux Questions" href="https://www.root-me.org?page=faq&amp;lang=fr"><img src='squelettes/img/faq_nb.svg?1566640929' style='max-width: 32px; max-height: 32px' /></a></li>
+<li class="hide-for-small-only"><a title="Plan du site" href="https://www.root-me.org?page=plan&amp;lang=fr"><img src='squelettes/img/plan_nb.svg?1566640893' style='max-width: 32px; max-height: 32px' /></a></li>
+<li class="hide-for-small-only"><a title="Contact" href="https://www.root-me.org?page=contact&amp;lang=fr"><img src='squelettes/img/contact_nb.svg?1566640717' style='max-width: 32px; max-height: 32px' /></a></li>
+<li class="hide-for-small-only"><a title="État des services" href="https://www.root-me.org?page=structure&amp;inc=inclusions%2Fservices&amp;lang=fr"><img src="squelettes/img/service_state_nb.svg" width="32" height="32"/></a></li>
+<li class="hide-for-small-only"><a title="Shop" href="https://www.root-me.org?page=structure&amp;inc=page-shop&amp;lang=fr"><img src="squelettes/img/shop_nb.svg" width="32" height="32"/></a></li>            
+<li class="search">
+<form action="https://www.root-me.org" method="get">
+<input type="hidden" value="recherche" name="page"/>
+<input type="hidden" value="fr" name="lang" />                    
+<input class="search" name="recherche" placeholder="Rechercher" type="search" />                        
+</form>
+</li>
+</ul>
+</section>
+</nav>
+</header>
+<div id="container">
+<div id="main_row">
+<div id="aside_wrapper">
+<aside id="aside" role="complementary" itemscope itemtype="https://schema.org/WPSideBar">
+<nav class="top-bar" data-topbar="" >
+<div class="top-bar-section" role="navigation" itemprop="hasPart" itemscope itemtype="https://schema.org/SiteNavigationElement">
+<ul class="right">
+<li class="has-dropdown">
+<a itemprop="url" href="fr/Capture-The-Flag/">
+<span class="logo left">
+<img  class="grayscale grayscale_hoveroff" src="IMG/rubon188.svg?1592071000" width="16px" height="16px" alt="0x0"/>
+</span>
+<span class="hide-for-medium-only">Capture The Flag</span>
+</a>
+<ul class="dropdown">
+<li class="show-for-medium-only first">Capture The Flag</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Capture-The-Flag/Calendrier/" title="Le calendrier des CTF &#224; venir. N&#039;h&#233;sitez pas &#224; nous indiquer ceux que l&#039;on aurait oubli&#233; en envoyant un message via [la page de contact-&gt;./?page=contact&#38;lang=fr]"  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon195.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Calendrier
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Capture-The-Flag/CTF-all-the-day/" title="Am&#233;liorez vos techniques de hack dans un environnement r&#233;el o&#249; l&#039;objectif est de compromettre, &#171; rooter &#187; compl&#232;tement la machine !"  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon196.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+CTF all the day
+</a>
+</li>
+</ul>
+</li>
+<li class="has-dropdown">
+<a itemprop="url" href="fr/Challenges/">
+<span class="logo left">
+<img  class="grayscale grayscale_hoveroff" src="IMG/rubon5.svg?1592071155" width="16px" height="16px" alt="0x0"/>
+</span>
+<span class="hide-for-medium-only">Challenges</span>
+</a>
+<ul class="dropdown">
+<li class="show-for-medium-only first">Challenges</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Challenges/App-Script/" title="Cette s&#233;rie d&#039;&#233;preuve vous confronte aux vuln&#233;rabilit&#233;s li&#233;es &#224; des faiblesses d&#039;environnement, de configuration ou encore &#224; des erreurs de d&#233;veloppement dans des langages de script ou de programmation."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon189.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+App - Script
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Challenges/App-Systeme/" title="Cette s&#233;rie d&#039;&#233;preuve vous confronte aux vuln&#233;rabilit&#233;s applicatives principalement li&#233;es aux erreurs de programmation aboutissant &#224; des corruptions de zones m&#233;moire."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon203.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+App - Système
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Challenges/Cracking/" title="Ces challenges permettent de comprendre le sens du terme &#171; langage compil&#233; &#187;. Ce sont des fichiers binaires &#224; d&#233;cortiquer pour aller chercher les instructions bas niveau permettant de r&#233;pondre au probl&#232;me pos&#233;."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon69.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Cracking
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Challenges/Cryptanalyse/" title="Retrouvez les secrets prot&#233;g&#233;s par des syst&#232;mes de chiffrement plus ou moins solides en r&#233;alisant des attaques cryptographiques."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon18.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Cryptanalyse
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Challenges/Forensic/" title="Mettez &#224; l&#039;&#233;preuve vos techniques d&#039;investigations num&#233;riques en analysant des traces m&#233;moire, des fichiers de journalisation, des captures r&#233;seaux..."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon208.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Forensic
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Challenges/Programmation/" title="Automatisez des t&#226;ches de plus en plus complexes pour valider ces challenges en moins de quelques secondes."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon17.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Programmation
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Challenges/Realiste/" title="Vous allez vous retrouver dans des environnements complets sur des th&#232;mes divers et vari&#233;s. &#192; vous d&#039;en comprendre le fonctionnement, d&#039;identifier les faiblesses et de cibler les vuln&#233;rabilit&#233;s &#224; exploiter."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon70.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Réaliste
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Challenges/Reseau/" title="Apprenez &#224; analyser et &#224; manipuler les diff&#233;rents protocoles et services les plus courants pour les tourner &#224; votre avantage."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon182.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Réseau
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Challenges/Steganographie/" title="Si la cryptographie est l&#039;art du secret, la st&#233;ganographie est l&#039;art de la dissimulation : l&#039;objet de la st&#233;ganographie n&#039;est pas de rendre un message inintelligible aux personnes non autoris&#233;es mais de le faire passer inaper&#231;u. "  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon67.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Stéganographie
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Challenges/Web-Client/" title="Apprenez &#224; exploiter les failles des applications web pour impacter leurs utilisateurs ou contourner des m&#233;canismes de s&#233;curit&#233; c&#244;t&#233; client."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon16.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Web - Client
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Challenges/Web-Serveur/" title="Ces &#233;preuves vous permettront d&#039;appr&#233;hender les techniques intrusives retrouv&#233;es sur le web, allant de l&#039;exploitation de faiblesses de configuration jusqu&#039;aux injections de code c&#244;t&#233; serveur."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon68.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Web - Serveur
+</a>
+</li>
+</ul>
+</li>
+<li class="has-dropdown">
+<a itemprop="url" href="fr/Communaute/">
+<span class="logo left">
+<img  class="grayscale grayscale_hoveroff" src="IMG/rubon19.svg?1592071000" width="16px" height="16px" alt="0x0"/>
+</span>
+<span class="hide-for-medium-only">Communauté</span>
+</a>
+<ul class="dropdown">
+<li class="show-for-medium-only first">Communauté</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Communaute/Canal-IRC/" title="Informations concernant le canal IRC. Discutez en ligne d&#232;s maintenant en utilisant [notre page webIRC-&gt;./spip.php?page=webirc]"  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon179.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Canal IRC
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Communaute/Chat-Box/" title="Laissez nous un message "  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon21.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Chat Box
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Communaute/Classement/" title="Classement des challenges"  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon98.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Classement
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Communaute/Contribuer/" title="Vous avez des id&#233;es, des comp&#233;tences dans le domaine de la s&#233;curit&#233; informatique ? N&#039;h&#233;sitez pas, participez ;-)"  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon175.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Contribuer
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Communaute/Forum/" title="Vous disposez ici d&#039;un espace vous permettant d&#039;&#233;changer, de dialoguer avec les autres membres de la communaut&#233;. Faites en bon usage."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon112.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Forum
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Communaute/Membres/" title="La liste des membres de la communaut&#233;."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon180.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Membres
+</a>
+</li>
+</ul>
+</li>
+<li class="has-dropdown">
+<a itemprop="url" href="fr/Documentation/">
+<span class="logo left">
+<img  class="grayscale grayscale_hoveroff" src="IMG/rubon1.svg?1592071000" width="16px" height="16px" alt="0x0"/>
+</span>
+<span class="hide-for-medium-only">Documentation</span>
+</a>
+<ul class="dropdown">
+<li class="show-for-medium-only first">Documentation</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Documentation/Applicatif/" title="L&#039;exploitation syst&#232;me et applicative reste tr&#232;s importante, que ce soit dans l&#039;optique exploit, pentest ou audit."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon2.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Applicatif
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Documentation/Cracking/" title="Le cracking permet de modifier le comportement de programmes informatiques"  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon13.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Cracking
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Documentation/Cryptologie/" title="La cryptologie, &#233;tymologiquement la science du secret, ne peut &#234;tre vraiment consid&#233;r&#233;e comme une science que depuis peu de temps. Cette science englobe la cryptographie &#8212; l&#039;&#233;criture secr&#232;te &#8212; et la cryptanalyse &#8212; l&#039;analyse de cette derni&#232;re."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon4.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Cryptologie
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Documentation/Reseaux/" title="Protocoles, architecture, techniques d&#039;attaques, etc"  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon12.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Réseaux
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Documentation/Web/" title="Tout syst&#232;me d&#039;information expos&#233; sur le r&#233;seau internet repr&#233;sente une cible, que ce soit &#224; travers les sites internet ou via des services web prenant des formes diverses."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon210.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Web
+</a>
+</li>
+</ul>
+</li>
+<li class="has-dropdown">
+<a itemprop="url" href="fr/Informations/">
+<span class="logo left">
+<img  class="grayscale grayscale_hoveroff" src="IMG/rubon106.svg?1592071000" width="16px" height="16px" alt="0x0"/>
+</span>
+<span class="hide-for-medium-only">Informations</span>
+</a>
+<ul class="dropdown">
+<li class="show-for-medium-only first">Informations</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Informations/Faiblesses-decouvertes/" title="Comme n&#039;importe quel syst&#232;me d&#039;informations ce portail comporte des vuln&#233;rabilit&#233;s... "  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon111.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Faiblesses découvertes
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Informations/L-association/" title="Root-Me est une association loi de 1901 &#224; but non lucratif dont l&#039;objectif est de promouvoir la diffusion libre du savoir relatif au hacking et &#224; la s&#233;curit&#233; de l&#039;information."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon107.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+L&#8217;association
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Informations/Mentions-Legales/" title="Au contact d&#039;un univers aussi grand que le n&#244;tre qui traite de nombreux domaines controvers&#233;s et de qualifications n&#039;ayant pas bonne r&#233;putation, il est devenu indispensable de mettre en garde l&#039;utilisateur sur l&#039;utilisation du portail ainsi que de ses services."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon109.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Mentions Légales
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Informations/Partenaires/" title="Nous sommes actuellement &#224; la recherche de partenaires. Si vous souhaitez participer &#224; notre projet, n&#039;h&#233;sitez pas &#224; [nous contacter-&gt;./spip.php?page=contact]. "  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon110.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Partenaires
+</a>
+</li>
+<li class="hide-for-small-only">
+<a class="smenu" href="fr/Informations/Sponsors/" title="Les sponsors qui nous aident &#224; faire vivre l&#039;association et ce portail."  itemprop="url">
+<img class='vmiddle grayscale grayscale_hoveroff' alt="" src="IMG/rubon201.svg?1592071000" style='max-width: 16px; max-height: 16px' />
+Sponsors
+</a>
+</li>
+</ul>
+</li>
+<li class="">
+<a itemprop="url" href="fr/Outils/">
+<span class="logo left">
+<img  class="grayscale grayscale_hoveroff" src="IMG/rubon6.svg?1592071000" width="16px" height="16px" alt="0x0"/>
+</span>
+<span class="hide-for-medium-only">Outils</span>
+</a>
+</li>
+</ul>
+</div>
+</nav>
+<div class="small-12 columns hide-for-medium-only">
+<h3>301 visiteurs en ce moment</h3>
+derniers inscrits&nbsp;:
+<ul class="inline-list ts">
+<li><a class=" forum"  title="Voir le profil de norak" href="/norak?lang=">norak</a></li>
+<li><a class=" forum"  title="Voir le profil de racan" href="/racan?lang=">racan</a></li>
+<li><a class=" forum"  title="Voir le profil de Alikhan" href="/Alikhan-482491?lang=">Alikhan</a></li>
+<li><a class=" forum"  title="Voir le profil de dede nurmuhamad" href="/dede-nurmuhamad?lang=">dede nurmuhamad</a></li>
+<li><a class=" forum"  title="Voir le profil de Zhasaral Almabek" href="/Zhasaral-Almabek?lang=">Zhasaral Almabek</a></li>
+<li><a class=" forum"  title="Voir le profil de daniyar.amangeldi" href="/daniyar-amangeldi?lang=">daniyar.amangeldi</a></li>
+<li><a class=" forum"  title="Voir le profil de SFSEFF" href="/SFSEFF?lang=">SFSEFF</a></li>
+</ul>               
+<h3>Chatbox</h3>
+<div class='ajaxbloc ajax-id-chat_box_mini' data-ajax-env='8a5EWOeKPbHh/kCB4SYoezBazPnAIZSTTLKMCsDueTppNfpAXzk/7laNE2F6vUSQLu2BBrM/MxWDzH/upgodV+C8N/Cq6zVdkvrkquOGSQMTpMRqxsrp0QnnxgDlacO6e7nqX1/ZEadwmIcWXOElasZ2ZkHSbqnxrM9+/Q6FO1LSvJ1zlj3+WcEYCghYqc2/CwIlJkiEd+Cr9F+O' data-origin="./?page=news&amp;lang=fr">
+<a name='pagination_chat_box_archive' id='pagination_chat_box_archive'></a>
+<ul>
+<li>
+<span class="left"><img class="vmiddle logo_auteur logo_6forum" width="48" height="48" src="IMG/auton0.png" alt="renizmy"  /></span>
+<span class="left" style="margin-left: 0.5rem;">
+<a class=" forum"  title="Voir le profil de renizmy" href="/renizmy?lang=fr">renizmy</a><br/>
+<span class="txs left">4 septembre 2020&nbsp;à&nbsp;19:22</span>
+</span>
+<div class="clearfix"></div>                
+<div class="chatbox txs text-left"><p><p>Bonjour</p></p></div>
+</li>
+<li>
+<span class="right"><img class="vmiddle logo_auteur logo_6forum" width="48" height="48" src="IMG/auton0.png" alt="dolube"  /></span>
+<span class="text-right right" style="margin-right: 0.5rem;">
+<a class=" forum"  title="Voir le profil de dolube" href="/dolube?lang=fr">dolube</a><br/>
+<span class="txs text-right">4 septembre 2020&nbsp;à&nbsp;18:31</span>
+</span>
+<div class="clearfix"></div>                
+<div class="chatbox txs text-right"><p><p> !ep1</p></p></div>
+</li>
+<li>
+<span class="left"><img class="vmiddle logo_auteur logo_1comite" width="48" height="48" src="IMG/auton7231.png" alt="xertux"  /></span>
+<span class="left" style="margin-left: 0.5rem;">
+<a class=" comite"  title="Voir le profil de xertux" href="/xertux?lang=fr">xertux</a><br/>
+<span class="txs left">4 septembre 2020&nbsp;à&nbsp;14:51</span>
+</span>
+<div class="clearfix"></div>                
+<div class="chatbox txs text-left"><p><p>@Jarodymous : en passant par des clients IRC comme le site <a href="https://mibbit.com/" class="spip_url spip_out auto" rel="nofollow external">https://mibbit.com/</a>. Les infos de connexion sont décrites sur le site root-me.</p></p></div>
+</li>
+</ul>
+<div class="pagination-centered">
+<ul class="pagination">
+<li><a href='./?page=news&amp;lang=fr&amp;debut_chat_box_archive=3#pagination_chat_box_archive' class='lien_pagination gris' rel='nofollow'>&gt;</a></li>
+</ul>
+</div>
+</div><!--ajaxbloc-->
+<span>            
+<a href="./?page=chatbox_message&amp;lang=fr" title="Poster un message" class="gris mediabox pageajax"><img src='squelettes/img/post.png' alt='' width='32' height='32' />&nbsp;Poster un message</a><br/>
+<a class="gris" href="./?page=news&amp;lang=fr" title="Rafraichir" onclick="ajaxReload('chat_box_mini'); return false;"><img src='squelettes/img/refresh.png' alt='' width='32' height='32' />&nbsp;Rafraichir</a>                
+</span>
+<div class="clearfix"></div>            <h3>Newsletter</h3>
+<div class="ajax gris"><div class='formulaire_spip formulaire_newsletter formulaire_newsletter_subscribe ajax'>
+<form method='post' action='/?page=news&amp;lang=fr'><div>
+<div><input name="page" value="news" type="hidden"
+/><input name="lang" value="fr" type="hidden"
+/><input name='formulaire_action' type='hidden'
+value='newsletter_subscribe' /><input name='formulaire_action_args' type='hidden'
+value='ceHeQOSaIfBe4Fysjt+bEBW2MJ7B7ynp0yHvMXi6s+vhM6hMyQbKuM+mJiFpm0Ntvucv2zu3sfzET6s=' /><input type='hidden' name='_jeton' value='91e6ac71c04c21fb4d2d6957ce3b7583b4cb440d' /><label class='check_if_nobot'><input type='checkbox' name='_nospam_encrypt' value='1' /> Je ne suis pas un robot</label></div><ul class="editer-groupe">
+<li class="editer editer_session_email obligatoire">
+<label for="session_email">Email</label><input type="email" name='x_TFZMUm5Pc3g0Q3hOK2Qxdm5aMGt5QT09' class="email text" value="" id="session_email"  required='required'/>
+</li>
+</ul>
+<!--extra-->
+<p class="boutons"><input type="submit" class="submit" value="M&#039;inscrire &#224; cette newsletter" /></p>
+</div><div class="editer saisie_session_email" style="display: none;">
+<label for="give_me_your_email">Veuillez laisser ce champ vide :</label>
+<input type="text" class="text email" name='x_TFZMUml1TWoraWw5K2Uxb240Zz0' id="give_me_your_email" value="" size="10" />
+</div></form>
+</div>
+</div>            <h3>Sponsorisé par</h3>
+<ul>
+<li><a href="https://public.geoide.fr" target="_BLANK" >GEOIDE</a></li>
+<li><a href="https://www.synacktiv.com" target="_BLANK" >Synacktiv</a></li>
+<li><a href="https://www.algosecure.fr" target="_BLANK" >AlgoSecure</a></li>
+<li><a href="https://www.certilience.fr" target="_BLANK" >Certilience</a></li>
+<li><a href="https://navixia.com" target="_BLANK" >Navixia</a></li>
+<li><a href="https://www.nbs-system.com" target="_BLANK" >NBS System</a></li>
+<li><a href="http://www.provadys.com" target="_BLANK" >Provadys</a></li>
+<li><a class="mediabox pageajax" href="./?page=structure&amp;inc=page-don&amp;lang=fr">Vous&nbsp;;-)</a></li>
+</ul>        </div>
+</aside>
+</div>        <div id="main_wrapper" class="row">
+<ul id="breadcrumb" class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+<a href="https://www.root-me.org?lang=fr" title="Accueil" itemprop="item"><span itemprop="name">Accueil</span></a>
+<meta itemprop="position" content="1">
+</li>
+</ul>        
+<main id="main" itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/WebPageElement">
+<div class='ajaxbloc' data-ajax-env='8bHOPKeaObAxCZUhjT6CFZrf+kt4Dp2TciodpEvgM70o/9ZTk1abnrs/rqdUkICgVU69sKK7GGTWfhgwG1QoqBgML/Q/QsWVRYiNS8pm8/bqnm0MXk7ao5Q7AkJL7Msd3rpw2pQHoR3YwULNqliQ7W4GNlb3d7avUVZ20gJZVRIfb45RS0mbdvzrXa6OQh5vk97ATMweogJYIYnzXgleliwJ16DO1M0iMsUyzUXCLleGGFW44mt7mqWYSKUBnM0VcgFvPwXCkDirI9SQ6GRvueiqt/GpyKCqNDCSTio3YuvIV0fElbjfRaDxn48=' data-origin="./?page=news&amp;lang=fr">
+<div class="small-12 columns" >
+<dl class="tabs" data-tab="">
+<dt></dt>
+<dd class="circular  active"><a class="ajax" href="./?page=news&amp;lang=fr&amp;inc=news" title="News"><img src="squelettes/img/breve.svg" class="vmiddle " height="16" width="16"/>&nbsp;News</a></dd>
+<dd class="circular"><a class="ajax" href="./?page=news&amp;lang=fr&amp;inc=challenge" title="Challenges"><img src="IMG/rubon5.svg" class="vmiddle   grayscale" height="16" width="16"/>&nbsp;Challenges</a></dd>
+<dd class="circular" title="Solutions"><a class="ajax" href="./?page=news&amp;lang=fr&amp;inc=solution"><img src="squelettes/img/solution.svg" class="vmiddle   grayscale" height="16" width="16"/>&nbsp;&nbsp;Solutions</a></dd>
+<dd class="circular" title="Forum"><a class="ajax" href="./?page=news&amp;lang=fr&amp;inc=forum"><img src='IMG/rubon112.svg?1592071000' style='max-width: 16px; max-height: 16px' class='vmiddle grayscale' />&nbsp;Forum</a></dd>
+<dd class="circular" title="Articles"><a class="ajax" href="./?page=news&amp;lang=fr&amp;inc=article"><img src='squelettes/img/article.svg?1566640014' style='max-width: 16px; max-height: 16px' class='vmiddle grayscale' />&nbsp;Articles</a></dd>
+<dd class="circular" title="offre"><a class="ajax" href="./?page=news&amp;lang=fr&amp;inc=offre"><img src='squelettes/img/offre.svg?1597132285' style='max-width: 16px; max-height: 16px' class='vmiddle grayscale' />&nbsp;Offres</a></dd>
+</dl>      
+<div class="tile" >
+<div class="t-body tb-padding">            
+<h1 itemprop="givenName">Dernièrement</h1>
+<a name='pagination_news' id='pagination_news'></a>
+<span class="txl right">25 août 2020</span><h2 class="crayon breve-titre-211 noir">Nouvelle fonctionnalité&nbsp;: offres d&#8217;emploi</h2>
+<div class="crayon breve-texte-211 "><h3 class="spip">Pourquoi ces offres ?</h3>
+<p>Des entreprises ou des écoles nous sollicitent régulièrement pour savoir si des membres sont en recherche d’emploi ou de formation. En parallèle, vous êtes de plus en plus nombreux à faire référence à vos statistiques Root-Me dans vos CV ou durant vos entretiens RH. Pour répondre aux demandes de ces professionnels tout en mettant en valeur les compétences de nos membres, <a href="https://pro.root-me.org/" class="spip_out" rel="external">Root-Me PRO</a> a développé un service leur permettant d’être mis en relation avec des membres en recherche de nouveaux challenges ou de nouvelles formations : l’offre “Complete my team”. Lorsque vous postulez, votre profil Root-Me leur est directement envoyé, sous réserve que vous remplissiez toutes les conditions (nombre de points par exemple).</p>
+<h3 class="spip">Qui peut soumettre ces offres ?</h3>
+<p>Seuls les clients <a href="https://pro.root-me.org/" class="spip_out" rel="external">Root-Me PRO</a> ayant souscrit à l’offre “Complete my team” peuvent diffuser leurs offres sur Root-Me. Il peut s’agir de PME, d’ESN, de grands groupes, d’écoles, d’universités, ...</p>
+<h3 class="spip">Qui peut consulter ces offres ?</h3>
+<p>Tout membre inscrit sur Root-Me peut consulter les offres validées et proposées sur Root-Me sur <a href="/?page=news&amp;lang=fr">la page d’accueil</a> dans <a href="/?page=news&amp;inc=offre&amp;lang=fr">l’onglet "emploi"</a>.</p>
+<h3 class="spip">Qui peut postuler à ces offres ?</h3>
+<p>Pour postuler à une offre, il est nécessaire d’avoir au préalable renseigné vos informations professionnelles depuis <a href="/?page=preferences&amp;lang=fr">vos paramètres</a>. Ces informations ne sont utilisées qu’à des fins de mise en relation avec des professionnels en lien avec les choix que vous aurez sélectionné. Les professionnels peuvent également choisir d’appliquer des restrictions telles qu’un nombre de points ou une liste de challenges à avoir réalisé pour pouvoir postuler. Par défaut, il est nécessaire d’avoir 100 points pour postuler.</p></div>
+<hr/>
+<span class="txl right">9 juillet 2020</span><h2 class="crayon breve-titre-209 noir">Nouveau sponsor&nbsp;: GEOIDE Crypto&amp;Com</h2>
+<div class="crayon breve-texte-209 "><dl class="spip_document_2308 spip_documents spip_documents_right" style="float:right;width:200px;"><dt><a href="https://public.geoide.fr/" class="spip_out" title="PNG - 5.9 ko"><img src="IMG/png/geoide-black.png" width="200" height="65" alt=""></a></dt>
+</dl><p>Nous sommes fiers de vous annoncer un nouveau sponsoring avec la société <a href="https://public.geoide.fr/" class="spip_out" rel="external">GEOIDE Crypto&amp;Com</a>, spécialisée dans la conception de produits de cybersécurité couplés à des solutions d’hypervision et d’aide à la décision.</p></div>
+<hr/>
+<span class="txl right">30 mai 2020</span><h2 class="crayon breve-titre-207 noir">Vol de données - password reuse</h2>
+<div class="crayon breve-texte-207 "><dl class="spip_document_2264 spip_documents spip_documents_right" style="float:right;width:450px;"><dt><img src="IMG/png/password-reuse.png" width="450" height="246" alt=""></dt>
+</dl><h3 class="spip">Que s’est-il passé ?</h3>
+<p>Historiquement l’association Root-Me a toujours fait confiance à tous ses contributeurs et à ce titre les membres les plus actifs jouissent généralement de droits forts.<br class="autobr">
+Un administrateur de la plateforme qui a beaucoup contribué à son époque puis s’est éclipsé pour poursuivre sa vie professionnelle et familiale a été victime d’une attaque par réutilisation de mot de passe : son mot de passe est apparu dans un leak quelconque et malheureusement c’était le même que sur la plateforme Root-Me. Ce compte compromis a permis un accès illégitime au backend depuis lequel nous gérons Root-Me.</p>
+<h3 class="spip">Quand est-ce que ça s’est passé ?</h3>
+<p>L’intrusion a commencé le 23 mai 2020 et a duré jusqu’au lendemain, le 24 mai 2020.</p>
+<h3 class="spip">Quels sont les impacts ?</h3>
+<p>Les solutions, mais surtout les adresses emails des utilisateurs de la plateforme ont été volées. Les condensats de vos mots de passes ne sont pas impactés. Les autres données récupérées telles que pseudonymes et clés GPG sont déjà des informations publiques affichées sur le profil des utilisateurs.</p>
+<h3 class="spip">Et maintenant ?</h3>
+<p>Pour la protection du backend et donc de vos données, nous avons mis en place une double authentification via GPG des administrateurs.</p></div>
+<hr/>
+<span class="txl right">29 janvier 2020</span><h2 class="crayon breve-titre-206 noir">Toulouse Hacking Convention 2020</h2>
+<div class="crayon breve-texte-206 "><dl class="spip_document_886 spip_documents spip_documents_right" style="float:right;"><dt><img src="IMG/png/logo_toulouse_hacking_convention_small-2.png" width="150" height="188" alt=""></dt>
+</dl><p>Le 6 mars 2020, l’ENSEEIHT de Toulouse accueillera la quatrième édition de la Toulouse Hacking Convention. Il s’agit d’une journée de conférences tournant autour de la sécurité, dans une ambiance conviviale et avec des membres de la communauté du Libre. :)<br class="autobr">
+Les précédentes éditions ont été un franc succès avec près de 300 participants. Comme l’an dernier, il n’y aura pas de CTF  (manque de bénévoles motivés). Cette année, nous accueillerons exclusivement des conférenciers francophones. Les sujets iront de la cryptographie post-quantique jusqu’à l’instrumentation d’applications. Le programme complet est disponible sur le <a href="https://thcon.party/" class="spip_out" rel="external">site Web</a>.<br class="autobr">
+Les vidéos des conférences de l’année dernière sont disponibles sur YouTube (nous n’avons pas encore de PeerTube…)<br class="autobr"><a href="https://tickets.thcon.party/thc/20/" class="spip_out" rel="external">Inscrivez‐vous</a>  rapidement, les inscriptions vont fermer d’ici peu  !</p></div>
+<hr/>
+<span class="txl right">24 janvier 2020</span><h2 class="crayon breve-titre-204 noir">Nouvelle série de challenges en environnement kernel Microsoft Windows</h2>
+<div class="crayon breve-texte-204 "><dl class="spip_document_2108 spip_documents spip_documents_right" style="float:right;"><dt><img src="IMG/png/erreur-ntkrnlmp-exe.png" width="395" height="250" alt=""></dt>
+</dl><p>Une nouvelle série de challenge d’exploitation Windows Kernel est désormais accessible ! Le premier challenge est ouvert à tous, les suivants sont temporairement exclusifs aux membres premium et seront ouverts au public aux dates suivantes :</p>
+<ul class="spip"><li> <a href="fr/Challenges/Programmation/WinKern-x64-shellcoding-vol-de-token" class="spip_in">WinKern x64 - shellcoding : vol de token</a> : public</li><li> <a href="fr/Challenges/App-Systeme/WinKern-x64-Stack-buffer-overflow-avance-ROP" class="spip_in">WinKern x64 - Stack buffer overflow avancé - ROP</a> : 24 février</li><li> <a href="fr/Challenges/App-Systeme/WinKern-x64-Use-After-Free" class="spip_in">WinKern x64 - Use After Free</a> : 24 mars</li></ul><p>Un grand merci à <a class="forum" title="Voir le profil de Synacktiv" href="/Synacktiv?lang=fr">Synacktiv</a>, <a class="pre" title="Voir le profil de __syscall" href="/__syscall?lang=fr">__syscall</a> pour leurs challenges !<br class="autobr">
+Un autre grand merci à <a class="comite" title="Voir le profil de und3ath" href="/und3ath?lang=fr">und3ath</a> &amp; <a class="minirezo" title="Voir le profil de Ech0" href="/Ech0?lang=fr">Ech0</a> pour leur travail sur l’architecture de ces exercices.</p></div>
+<hr/>
+<span class="txl right">23 janvier 2020</span><h2 class="crayon breve-titre-203 noir">Root-Me Pro&nbsp;: une version entièrement dédiée aux professionnels</h2>
+<div class="crayon breve-texte-203 "><dl class="spip_document_2045 spip_documents spip_documents_right" style="float:right;"><dt><a href="https://pro.root-me.org/" class="spip_out" title="PNG - 13.4 ko"><img src="IMG/png/elysium_-_logo_root-me_pro-03.png" width="210" height="178" alt=""></a></dt>
+</dl><p>Avec plus de 10 ans d’existence, Root-Me est devenue la plateforme en ligne proposant le plus grand nombre et la plus grande variété de contenus pratiques dédiés à la sécurité informatique (ethical hacking, devsec, forensic, etc.). Grâce à une communauté de près de 300 000 membres, les diverses contributions permettent à Root-Me de proposer des contenus réalistes, documentés et adaptés aux problématiques techniques auxquelles font face les experts en cybersécurité. Dernièrement, de nouvelles catégories d’exercices ont d’ailleurs vu le jour : série Blockchain - Ethereum, série Windows PE, série Windows Kernel.</p>
+<p>Fort de cette expertise, la plateforme Root-Me est aujourd’hui utilisée par des joueurs du monde entier dont de nombreux professionnels qui souhaitent entraîner leurs équipes, organiser des événements cybersécurité (CTF, Hackaton, etc.) ou encore détecter de nouveaux talents. Face à ces besoins et pour répondre aux nombreuses sollicitations d’écoles et entreprises, nous avons pris le temps de préparer une offre complète que vous pouvez retrouver dès maintenant sur la plateforme Root-Me PRO.</p>
+<p>Pour en savoir plus, vous n’hésitez pas à contacter les équipes <a href="https://pro.root-me.org/" class="spip_out" rel="external">Root-Me Pro</a> !</p></div>
+<hr/>
+<span class="txl right">23 janvier 2020</span><h2 class="crayon breve-titre-156 noir">Synacktiv sponsorise Root-Me&nbsp;!</h2>
+<div class="crayon breve-texte-156 "><dl class="spip_document_1182 spip_documents spip_documents_right" style="float:right;"><dt><a href="https://www.synacktiv.com/" class="spip_out" title="PNG - 5.8 ko"><img src="IMG/png/synacktiv.png" width="301" height="76" alt=""></a></dt>
+</dl><p><a href="https://www.synacktiv.com/" class="spip_out" rel="external">Synacktiv</a> est une société spécialisée en sécurité offensive fondée en 2012 par des experts du domaine. Nous recrutons des passionnés dans nos différents pôles : pentest, reverse-engineering et développement d’outils offensifs.</p>
+<p><a href="https://www.synacktiv.com/" class="spip_out" rel="external">Synacktiv</a> dispose de sites à Paris, Toulouse, Rennes et Lyon et d’une équipe de plus de 55 experts. Nous sommes agréés CESTI par l’ANSSI et en cours de certification PASSI.</p></div>
+<hr/>
+<span class="txl right">3 janvier 2020</span><h2 class="crayon breve-titre-201 noir">HackSecuReims 2020</h2>
+<div class="crayon breve-texte-201 "><dl class="spip_document_2090 spip_documents spip_documents_right" style="float:right;"><dt><a href="https://hacksecureims.eu" class="spip_out" title="PNG - 39.8 ko"><img src="local/cache-vignettes/L300xH157/logo-a3ab8.png" width="300" height="157" alt=""></a></dt>
+</dl><p>Pour la 4ème année, un événement sécurité  est organisé à Reims. <br class="autobr">
+Il se nomme HackSecuReims et est ouvert à tous les étudiants de l’enseignement supérieur dans la limite de 120 places.<br class="autobr">
+L’évènement aura lieu dans les locaux de l’UFR Sciences Exactes et Naturelles de l’Université de Reims Champagne-Ardenne du vendredi 7 février 2020 à 21h au samedi 8 février 2020 11h.<br class="autobr">
+Au préalable de ce CTF, des conférences auront lieu de 14h à 19h sur le thème de la sécurité et de la simulation numérique.</p>
+<p> Plus d’informations sur <a href="https://www.hacksecureims.eu/" class="spip_url spip_out auto" rel="nofollow external">https://www.hacksecureims.eu/</a></p></div>
+<hr/>
+<span class="txl right">6 décembre 2019</span><h2 class="crayon breve-titre-197 noir">Nouvelle série de challenges&nbsp;: AppSys/Windows</h2>
+<div class="crayon breve-texte-197 "><p>Une nouvelle série de challenge d’exploitation Windows est désormais accessible ! Le premier challenge est ouvert à tous, les suivants sont temporairement exclusifs aux membres premium et seront ouverts au public aux dates suivantes :</p>
+<p><img src="squelettes-dist/puce.gif" width="8" height="11" class="puce" alt="-"> <a href="fr/Challenges/App-Systeme/PE32-Stack-buffer-overflow-basic" class="spip_in">PE32 - Local stack buffer overflow basic</a> : public
+<br><img src="squelettes-dist/puce.gif" width="8" height="11" class="puce" alt="-"> <a href="fr/Challenges/App-Systeme/PE32-Stack-buffer-overflow-avance" class="spip_in">PE32 - Advanced stack buffer overflow</a> : 3 janvier
+<br><img src="squelettes-dist/puce.gif" width="8" height="11" class="puce" alt="-"> <a href="fr/Challenges/App-Systeme/PE32-Format-string-bug" class="spip_in">PE32+ Egg Hunter</a> : 3 février
+<br><img src="squelettes-dist/puce.gif" width="8" height="11" class="puce" alt="-"> <a href="fr/Challenges/App-Systeme/PE32-Basic-ROP" class="spip_in">PE32+ Basic ROP</a> : 3 mars</p></div>
+<hr/>
+<span class="txl right">18 novembre 2019</span><h2 class="crayon breve-titre-181 noir">API&nbsp;: api.www.root-me.org</h2>
+<div class="crayon breve-texte-181 "><dl class="spip_document_2047 spip_documents spip_documents_right" style="float:right;"><dt><a href="https://api.www.root-me.org/" class="spip_out" title="PNG - 8.2 ko"><img src="IMG/png/api.png" width="128" height="128" alt=""></a></dt>
+</dl><p>Une API vous permettant d’interagir avec les données du portail est disponible à cette adresse <a href="https://api.www.root-me.org/" class="spip_out" rel="external">api.www.root-me.org</a>. Les "endpoints" disponibles sont les suivants :</p>
+<ul class="spip"><li> <a href="https://api.www.root-me.org/login" class="spip_out" rel="external">/login</a></li><li> <a href="https://api.www.root-me.org/challenges" class="spip_out" rel="external">/challenges</a></li><li> <a href="https://api.www.root-me.org/challenges/id_challenge" class="spip_out" rel="external">/challenges/id_challenge</a></li><li> <a href="https://api.www.root-me.org/auteurs" class="spip_out" rel="external">/auteurs</a></li><li>
+<a href="https://api.www.root-me.org/auteurs/id_auteur" class="spip_out" rel="external">/auteurs/id_auteur
+</a>
+</li><li> <a href="https://api.www.root-me.org/environnements_virtuels" class="spip_out" rel="external">/environnements_virtuels</a></li><li> <a href="https://api.www.root-me.org/environnements_virtuels/id_environnement_virtuel" class="spip_out" rel="external">/environnements_virtuels/id_environnement_virtuel</a></li></ul><div class="info">Vous devez être authentifié, c’est à dire envoyer votre cookie de session ’spip_session’ pour y accéder.</div><div class="warning">Aucune limite n’est pour le moment fixée,  cela pourrait évoluer rapidement en cas d’abus.</div>
+<p>Il s’agit d’une première version encore en développement, merci pour votre indulgence.</p></div>
+<div class="pagination-centered">
+<ul class="pagination">
+<li class="current"><a href='./?page=news&amp;lang=fr&amp;debut_news=0#pagination_news' class='lien_pagination gris' rel='nofollow'>1</a></li>
+<li><a href='./?page=news&amp;lang=fr&amp;debut_news=10#pagination_news' class='lien_pagination gris' rel='nofollow'>2</a></li>
+<li><a href='./?page=news&amp;lang=fr&amp;debut_news=20#pagination_news' class='lien_pagination gris' rel='nofollow'>3</a></li>
+<li><a href='./?page=news&amp;lang=fr&amp;debut_news=30#pagination_news' class='lien_pagination gris' rel='nofollow'>4</a></li>
+<li><a href='./?page=news&amp;lang=fr&amp;debut_news=40#pagination_news' class='lien_pagination gris' rel='nofollow'>5</a></li>
+<li><a href='./?page=news&amp;lang=fr&amp;debut_news=50#pagination_news' class='lien_pagination gris' rel='nofollow'>6</a></li>
+<li><a href='./?page=news&amp;lang=fr&amp;debut_news=60#pagination_news' class='lien_pagination gris' rel='nofollow'>7</a></li>
+<li><a href='./?page=news&amp;lang=fr&amp;debut_news=70#pagination_news' class='lien_pagination gris' rel='nofollow'>8</a></li>
+<li><a href='./?page=news&amp;lang=fr&amp;debut_news=80#pagination_news' class='lien_pagination gris' rel='nofollow'>9</a></li>
+<li><a href='./?page=news&amp;lang=fr&amp;debut_news=10#pagination_news' class='lien_pagination gris' rel='nofollow'>&gt;</a></li>
+<li><a href='./?page=news&amp;lang=fr&amp;debut_news=100#pagination_news' class='lien_pagination gris' rel='nofollow'>...</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div><!--ajaxbloc-->
+</main>
+<footer id="footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
+<div class="text-center">
+<div class="columns small-12">
+<img src="IMG/siteon0.svg?1574327304" class="vmiddle grayscale" alt="Root-Me" width="48" height="48"/>
+</div>
+<div class="columns small-12">
+<a class="gris2" title="Confidentialité" href="https://www.root-me.org?page=structure&amp;inc=page-confidentialite&amp;lang=fr">Confidentialité</a>
+&nbsp;|&nbsp;
+<a class="gris2" title="Mentions Légales"  href="https://www.root-me.org/fr/Informations/Infos-Legales/">Mentions Légales</a>
+&nbsp;|&nbsp;
+<a class="gris2" title="Conditions Générales d'Utilisation" href="https://www.root-me.org?page=structure&amp;inc=page-CGU&amp;lang=fr">Conditions Générales d'Utilisation</a><br/>
+Root Me&nbsp;: plateforme d&#8217;apprentissage dédiée au Hacking et à la Sécurité de l&#8217;Information<br/>
+©&nbsp;2010&nbsp;-&nbsp;2020<br/>
+<hr/>
+</div>
+</div>
+<div class="text-center">
+<div class="small-10 large-3 small-centered columns">
+<div class="small-3 columns"><a href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fwww.root-me.org%2F&region=follow_link&screen_name=rootme_org&tw_p=followbutton" title="Twitter"><img src='squelettes/img/twitter.svg?1573023931' alt='Twitter' class='vmiddle grayscale grayscale_hoveroff' style='max-width: 24px; max-height: 24px' /></a></div>
+<div class="small-3 columns"><a href="https://www.linkedin.com/groups/Root-Me-hacking-and-information-8180601" title="Linkedin"><img src='squelettes/img/linkedin.svg?1573023925' alt='Linkedin' class='vmiddle grayscale grayscale_hoveroff' style='max-width: 24px; max-height: 24px' /></a></div>                
+<div class="small-3 columns"><a href="https://www.root-me.org?page=flux_rss&amp;lang=fr" title="Flux Dynamique"><img src='squelettes/img/rss.svg?1573023935' alt='Flux Dynamique' class='vmiddle grayscale grayscale_hoveroff' style='max-width: 24px; max-height: 24px' /></a></div>
+<div class="small-3 columns"><a href="https://facebook.com/" title="Facebook"><img src='squelettes/img/facebook.svg?1573024094' alt='Facebook' class='vmiddle grayscale grayscale_hoveroff' style='max-width: 24px; max-height: 24px' /></a></div>
+</div>
+</div>
+</footer>        </div>
+</div>
+</div>
+</body>
+</html>
