@@ -47,6 +47,7 @@ func filterURLName(urlNotFiltered string) string {
 
 //CopyScrapping : fonction copiant dans un fichier HTML les page html scrappé
 func CopyScrapping(i int, url string) {
+	defer Async.Done()
 	name := filterURLName(url)
 
 	htmlFile, err := createHTMLFile(name)
@@ -65,5 +66,4 @@ func CopyScrapping(i int, url string) {
 	if err != nil {
 		log.Fatalf("Erreur lors de la copy du contenu de l'url : %v\n", err)
 	}
-	Async.Done()
 }
