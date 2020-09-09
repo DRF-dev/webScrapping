@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"strconv"
+	"strings"
 	"sync"
 )
 
@@ -13,7 +13,14 @@ import (
 var Async sync.WaitGroup
 
 func createHTMLFile(filename string) (*os.File, error) {
-	HTMLFile, err := os.Create(filename + ".html")
+
+	mkdirName := "html"
+	err := os.MkdirAll(mkdirName, os.ModePerm)
+	if err != nil {
+		return nil, err
+	}
+
+	HTMLFile, err := os.Create(mkdirName + "/" + filename + ".html")
 	if err != nil {
 		return nil, err
 	}
@@ -28,10 +35,21 @@ func readURL(url string) (*http.Response, error) {
 	return res, nil
 }
 
+func filterURLName(urlNotFiltered string) string {
+	list := strings.Split(urlNotFiltered, "/")
+	domainName := list[2]
+	arrayDomainName := strings.Split(domainName, ".")
+	if arrayDomainName[0] == "www" {
+		return arrayDomainName[1]
+	}
+	return arrayDomainName[0]
+}
+
 //CopyScrapping : fonction copiant dans un fichier HTML les page html scrappé
 func CopyScrapping(i int, url string) {
-	index := strconv.Itoa(i)
-	htmlFile, err := createHTMLFile(index)
+	name := filterURLName(url)
+
+	htmlFile, err := createHTMLFile(name)
 	if err != nil {
 		log.Fatalf("Erreur lors de la création du fichier HTML : %v\n", err)
 	}
